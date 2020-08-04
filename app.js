@@ -11,3 +11,31 @@ const text = [
   `Rutters Plate Fleet boom chandler Brethren of the Coast handsomely lookout marooned brigantine knave. Buccaneer gangway jack rum loot spyglass line Jack Tar fore gaff. Gaff topmast scuttle ballast swab draught measured fer yer chains dance the hempen jig Chain Shot yardarm.`,
 ];
 
+
+const amount = document.getElementById('amount'),
+	  form = document.querySelector('form'),
+	  loremText = document.querySelector('.lorem-text');
+
+
+form.addEventListener('submit', e => {
+	e.preventDefault();
+
+	const value = parseInt(amount.value); 
+	const random = Math.floor(Math.random()*text.length);
+
+	if(amount.value < 0 || amount.value > 9 || amount.value === '') {
+		loremText.innerHTML = `<p class="result">${text[random]}</p>`;
+	} else {
+		let textTemp = text.slice(0, value);
+		textTemp = textTemp.map(item => {
+			return `<p class="result">${item}</p>`;
+		}).join('');
+		loremText.innerHTML = textTemp;
+	}
+
+});
+
+
+
+
+

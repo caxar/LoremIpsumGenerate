@@ -16,7 +16,7 @@ body {
 }
 
 .container h3 {
-  padding-top: 100px;
+  padding-top: 50px;
   font-size: 30px;
   font-weight: 800;
   color: #34495e;
@@ -62,4 +62,5 @@ form .btn {
   color: #34495e;
   font-size: 20px;
   margin-bottom: 25px;
+  line-height: 1.8rem;
 }
